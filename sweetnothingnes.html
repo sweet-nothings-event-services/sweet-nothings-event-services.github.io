@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Nothings - Event Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>SWEET NOTHINGS - Event Services</h1>
+        <p>Sprawiamy, że każde wydarzenie staje się niezapomniane.</p>
+        <style>
+            /* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF1E6; /* jasny różowy */
+    color: #FFF1E6;
+}
+
+header {
+    background-color: #FFEC99; /* jasny żółty */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    background-color: #ADD8E6; /* jasny błękitny */
+    padding: 20px;
+    color: white;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #FFEC99; /* jasny żółty */
+    padding: 10px;
+    text-align: center;
+}
+.parallax {
+    /* Create the parallax scrolling effect */
+    /* background-image: url("image.jpg"); You should replace this with your own image */
+    /* height: 500px;  */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+} */
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF1E6; /* jasny różowy */
+    color: #000;
+}
+
+header {
+    background: linear-gradient(45deg, #FFEC99, #ADD8E6); /* jasny żółty, jasny błękitny */
+    padding: 20px;
+    text-align: center;
+    animation: gradient 3s infinite linear;
+}
+
+main {
+    background-color: #ADD8E6; /* jasny błękitny */
+    padding: 20px;
+    perspective: 1000px; /* potrzebne dla efektu 3D */
+}
+
+section {
+    margin-bottom: 20px;
+    transform-style: preserve-3d; /* zachowuje efekt 3D podczas transformacji */
+    animation: rotate 10s infinite linear;
+}
+
+footer {
+    background: linear-gradient(45deg, #ADD8E6, #FFEC99); /* jasny błękitny, jasny żółty */
+    padding: 10px;
+    text-align: center;
+    animation: gradient 5s infinite linear;
+}
+
+/* animacja zmieniającego się gradientu */
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* animacja obracającej się sekcji */
+@keyframes rotate {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(1turn);}
+}
+nav ul li a {
+    transition: color 0.5s;
+}
+
+nav ul li a:hover {
+    color: #FFEC99;
+}
+.client-info {
+    display: none;
+    transition: opacity 0.5s;
+}
+
+.client:hover .client-info {
+    display: block;
+    opacity: 1;
+}
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFF1E6 0%, #FFEC99 100%);
+    color: #000;
+    overflow-x: hidden;
+}
+
+h1, h2, p {
+    text-align: center;
+    transform: skewY(-3deg);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+header {
+    background: #ADD8E6;
+    padding: 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    animation: gradient 5s infinite linear;
+}
+
+main {
+    padding: 50px;
+    perspective: 1000px;
+    /* transform-style: preserve-3d; */
+    /* animation: rotate 10s infinite linear; */
+}
+
+footer {
+    background: linear-gradient(135deg, #ADD8E6, #FFEC99);
+    padding: 10px;
+    text-align: center;
+    animation: gradient 5s infinite linear;
+}
+
+button {
+    background: linear-gradient(135deg, #FFEC99, #ADD8E6);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ADD8E6, #FFEC99);
+}
+
+/* Animacja zmieniającego się gradientu */
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+header {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(45deg, #FFEC99, #ADD8E6, #FFF1E6);
+    background-size: 600% 100%;
+    animation: Gradient 10s ease infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px; bottom: -50px; left: -50px;
+    background-repeat: no-repeat;
+    background-color: #ADD8E6;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    animation: rotatee 20s linear infinite;
+}
+
+@keyframes Gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotatee {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+        </style>
+    </header>
+
+    <main>
+        <button id="back-to-top">Wróć do góry</button>
+
+        
+        <section class="parallax">
+            <div class="content">
+                <h2>O Nas</h2>
+                <p>Jesteśmy Sweet Nothingnes Event Services - niezawodnym partnerem w organizacji koncertów i eventów od ponad trzech lat. Specjalizujemy się w dostarczaniu unikalnych produktów na każde wydarzenie, które gwarantują niezapomniane przeżycia dla Twojej publiczności.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Dlaczego warto z nami współpracować?</h2>
+            <p>W Sweet Nothings Event Services, niezawodność i dyskrecja to nasze priorytety. Dbamy o to, aby nasze produkty były dostarczane punktualnie, zawsze skrupulatnie przestrzegając wymagań naszych klientów.</p>
+        </section>
+        <section>
+            <h2>Zaufali nam</h2>
+            <ul>
+                <li class="client"><h3>Wiktor Słowotok</h3> <p class="client-info">Współpraca od 2 lat</p></li>
+                <li class="client"><h3>Ropucha</h3> <p class="client-info">Współpraca od roku</p></li>
+                <li class="client"><h3>Lkoda</h3> <p class="client-info">Współpraca od CloserFest2023</p></li>
+                <li class="client"><h3>Tymek The Rapper</h3> <p class="client-info">Współpraca od 2 lat</p></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Spotkajmy się</h2>
+            <p>Najbliższe wydarzenie w białym namiocie 3 dnia CloserFest2023.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sweet Nothings - Event Services</p>
+    </footer>
+</body>
+
+<script>
+    window.addEventListener("scroll", function() {
+        var scroll = window.pageYOffset;
+        var parallax = document.querySelector(".parallax");
+        parallax.style.backgroundPositionY = scroll * 0.5 + "px";
+    });
+    const backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) { // Pokaż przycisk, gdy strona jest przewinięta o 200px
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo(0, 0); // Przewiń do góry strony
+});
+
+</script>
+</html>
