@@ -12,231 +12,226 @@
         <h1>SWEET NOTHINGS - Event Services</h1>
         <p>Sprawiamy, że każde wydarzenie staje się niezapomniane.</p>
         <style>
-            /* style.css */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --light-pink: #FFF1E6;
+    --light-yellow: #FFEC99;
+    --light-blue: #ADD8E6;
+    --text-dark: #000;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #FFF1E6; /* jasny różowy */
-    color: #FFF1E6;
 }
-
-header {
-    background-color: #FFEC99; /* jasny żółty */
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    background-color: #ADD8E6; /* jasny błękitny */
-    padding: 20px;
-    color: white;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #FFEC99; /* jasny żółty */
-    padding: 10px;
-    text-align: center;
-}
-.parallax {
-    /* Create the parallax scrolling effect */
-    /* background-image: url("image.jpg"); You should replace this with your own image */
-    /* height: 500px;  */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-/* .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-} */
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF1E6; /* jasny różowy */
-    color: #000;
-}
-
-header {
-    background: linear-gradient(45deg, #FFEC99, #ADD8E6); /* jasny żółty, jasny błękitny */
-    padding: 20px;
-    text-align: center;
-    animation: gradient 3s infinite linear;
-}
-
-main {
-    background-color: #ADD8E6; /* jasny błękitny */
-    padding: 20px;
-    perspective: 1000px; /* potrzebne dla efektu 3D */
-}
-
-section {
-    margin-bottom: 20px;
-    transform-style: preserve-3d; /* zachowuje efekt 3D podczas transformacji */
-    animation: rotate 10s infinite linear;
-}
-
-footer {
-    background: linear-gradient(45deg, #ADD8E6, #FFEC99); /* jasny błękitny, jasny żółty */
-    padding: 10px;
-    text-align: center;
-    animation: gradient 5s infinite linear;
-}
-
-/* animacja zmieniającego się gradientu */
-@keyframes gradient {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-/* animacja obracającej się sekcji */
-@keyframes rotate {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(1turn);}
-}
-nav ul li a {
-    transition: color 0.5s;
-}
-
-nav ul li a:hover {
-    color: #FFEC99;
-}
-.client-info {
-    display: none;
-    transition: opacity 0.5s;
-}
-
-.client:hover .client-info {
-    display: block;
-    opacity: 1;
-}
-#back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-/* style.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body {
     font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #FFF1E6 0%, #FFEC99 100%);
-    color: #000;
+    background: linear-gradient(135deg, var(--light-pink), var(--light-yellow));
+    color: var(--text-dark);
+    line-height: 1.6;
     overflow-x: hidden;
-}
-
-h1, h2, p {
-    text-align: center;
-    transform: skewY(-3deg);
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-}
-
-header {
-    background: #ADD8E6;
-    padding: 20px;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    animation: gradient 5s infinite linear;
-}
-
-main {
-    padding: 50px;
-    perspective: 1000px;
-    /* transform-style: preserve-3d; */
-    /* animation: rotate 10s infinite linear; */
-}
-
-footer {
-    background: linear-gradient(135deg, #ADD8E6, #FFEC99);
-    padding: 10px;
-    text-align: center;
-    animation: gradient 5s infinite linear;
-}
-
-button {
-    background: linear-gradient(135deg, #FFEC99, #ADD8E6);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-button:hover {
-    background: linear-gradient(135deg, #ADD8E6, #FFEC99);
-}
-
-/* Animacja zmieniającego się gradientu */
-@keyframes gradient {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-header {
+    animation: gradient 5s ease infinite;
     position: relative;
-    padding: 50px;
-    text-align: center;
-    overflow: hidden;
-    background: linear-gradient(45deg, #FFEC99, #ADD8E6, #FFF1E6);
-    background-size: 600% 100%;
-    animation: Gradient 10s ease infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
 
-header:before {
-    content: '';
-    position: absolute;
-    top: -50px; right: -50px; bottom: -50px; left: -50px;
-    background-repeat: no-repeat;
-    background-color: #ADD8E6;
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
-    animation: rotatee 20s linear infinite;
-}
-
-@keyframes Gradient {
+@keyframes gradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-@keyframes rotatee {
+body::before, body::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s infinite alternate;
+}
+
+body::after {
+    top: auto;
+    bottom: 5%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% { transform: translateY(-30px); }
+    100% { transform: translateY(30px); }
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 1rem;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-blue);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    transform: skewY(-3deg);
+    transform-origin: top right;
+    z-index: -1;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
 
+main {
+    padding: 2rem;
+}
+
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 1rem auto;
+    background: linear-gradient(135deg, var(--light-yellow), var(--light-blue));
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    animation: hoverEffect 1s ease-in-out infinite;
+}
+
+@keyframes hoverEffect {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+button:hover {
+    transform: scale(1.05);
+    animation: none;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+li {
+    padding: 1rem;
+    border-bottom: 2px solid var(--light-blue);
+    transition: background .3s ease-in-out;
+    position: relative;
+    background-color: transparent;
+}
+
+li:hover {
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+}
+
+footer {
+    background: linear-gradient(135deg, var(--light-blue), var(--light-yellow));
+    padding: 1rem;
+    text-align: center;
+}
 
 
-        </style>
+
+
+
+
+
+
+
+/* ... istniejący kod CSS ... */
+
+h1, h2 {
+    text-align: center;
+    padding: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: colorChange 5s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: var(--text-dark); }
+    25% { color: var(--light-blue); }
+    50% { color: var(--light-pink); }
+    75% { color: var(--light-yellow); }
+    100% { color: var(--text-dark); }
+}
+
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 1rem auto;
+    background: linear-gradient(135deg, var(--light-yellow), var(--light-blue));
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    animation: hoverEffect 1s ease-in-out infinite;
+}
+
+button:hover {
+    transform: rotate(360deg);
+    animation: none;
+}
+
+li {
+    padding: 1rem;
+    border-bottom: 2px solid var(--light-blue);
+    transition: background .3s ease-in-out, transform .3s ease-in-out;
+    position: relative;
+    background-color: transparent;
+}
+
+li:hover {
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ... reszta kodu CSS ... */
+
+</style>
     </header>
 
     <main>
-        <button id="back-to-top">Wróć do góry</button>
 
         
         <section class="parallax">
@@ -248,6 +243,17 @@ header:before {
         <section>
             <h2>Dlaczego warto z nami współpracować?</h2>
             <p>W Sweet Nothings Event Services, niezawodność i dyskrecja to nasze priorytety. Dbamy o to, aby nasze produkty były dostarczane punktualnie, zawsze skrupulatnie przestrzegając wymagań naszych klientów.</p>
+        </section>
+        <section>
+            <h2>Jak działamy?</h2>
+            <p>Nasz proces jest prosty, bezpośredni i gwarantuje najwyższą dyskrecję. Oto jak to wygląda krok po kroku:</p>
+            <ol>
+                <li><strong>Spotkanie i Wybór:</strong> Podczas specjalnie ustalonego spotkania na wybranym branżowym wydarzeniu, podpisujemy umowę. W tym czasie, dostarczamy Ci pełną listę dostępnych substancji - od kokainy, przez ecstasy, aż do amfetaminy i wielu innych. Wybierasz te, które najbardziej odpowiadają Twoim oczekiwaniom.</li>
+                <li><strong>Planowanie:</strong> Po wyborze towaru, dostarczasz nam informacje dotyczące Twoich nadchodzących koncertów - daty i miejsca.</li>
+                <li><strong>Realizacja:</strong> W dniu koncertu, nasz doświadczony i dyskretny zespół jest obecny na miejscu, dbając o sprawną realizację planu. Jesteśmy niewidoczni, ale zawsze gotowi do działania.</li>
+                <li><strong>Podział Zysków:</strong> Po zakończeniu imprezy, dzielimy zyski po równo - 50/50. Tak zapewniamy, że każdy z nas czerpie korzyści z naszej współpracy.</li>
+            </ol>
+            <p>Współpracujący z nami artyści zwykle zarabiają około 30 000 PLN za jeden koncert. To pokazuje, jak opłacalne i bezproblemowe jest partnerstwo z Sweet Nothings Event Services.</p>
         </section>
         <section>
             <h2>Zaufali nam</h2>
@@ -263,7 +269,7 @@ header:before {
             <p>Najbliższe wydarzenie w białym namiocie 3 dnia CloserFest2023.</p>
         </section>
     </main>
-
+        <button id="back-to-top">Wróć do góry</button>
     <footer>
         <p>&copy; 2023 Sweet Nothings - Event Services</p>
     </footer>
@@ -291,3 +297,4 @@ header:before {
 
 </script>
 </html>
+
